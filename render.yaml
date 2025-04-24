@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: telegram-bot-sumativa  # <-------------------- SUSTITUYE ESTO
+    env: php81
+    region: oregon         # <-------------------- SUSTITUYE ESTO (opcional)
+    buildCommand: ""       # <-------------------- SUSTITUYE ESTO (si usas Composer)
+    startCommand: php -S 0.0.0.0:$PORT -t .
+    healthCheckPath: /
+    envVars:
+      - key: TELEGRAM_BOT_TOKEN
+        value: 7514916567:AAGgWwCYc-eq96r22430FOvNujqeqQ5sGpI  # <-------------------- SUSTITUYE ESTO
+    # Puedes añadir más variables de entorno si tu bot las necesita
